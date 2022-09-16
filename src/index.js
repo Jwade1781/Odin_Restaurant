@@ -1,15 +1,11 @@
 import './css/style.css';
 import {renderNav} from "./nav.js";
+import {renderHome} from "./home.js";
 
 function main(){
     const contentDiv = document.querySelector("#content");
-    console.log("Loaded");
-    contentDiv.appendChild(displayNav());
-
-}
-
-const displayNav = () =>{
-    return renderNav;
+    contentDiv.appendChild(renderNav);
+    contentDiv.appendChild(renderHome);
 }
 
 window.addEventListener("load", () => main());

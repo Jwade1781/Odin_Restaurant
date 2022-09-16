@@ -14,6 +14,8 @@ const renderNav = (() => {
 
     const logoImg = document.createElement("img");
 
+    const middleHeader = document.createElement("h3");
+    middleHeader.textContent = "Hibachi, Sushi, Fun";
 
     let Home, Menu, Gallery, Contact;
     const buttons = [
@@ -37,7 +39,6 @@ const renderNav = (() => {
 
     for (const button of buttons){
         const newButton = document.createElement("h5");
-        console.log(button["name"]);
         newButton.textContent = button["name"];
         navButtonsDiv.appendChild(newButton);
     }
@@ -45,6 +46,7 @@ const renderNav = (() => {
     navLogoDiv.appendChild(logoImg);
     navLogoDiv.append(logoHeader);
     navHeaderDiv.appendChild(navLogoDiv);
+    navHeaderDiv.appendChild(middleHeader);
     navHeaderDiv.appendChild(navButtonsDiv);
     return navHeaderDiv;
 
