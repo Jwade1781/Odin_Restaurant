@@ -5,7 +5,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--accentColor5);
     color: var(--fontLight);
     text-align: center;
 }
@@ -21,10 +20,12 @@
 }
 
 #content > #homeDiv > #orderButton {
+    padding: var(--xSmPadding) var(--smPadding);
     margin-top: var(--smPadding);
     border-radius: var(--roundBorder);
 }
 
 #content > #homeDiv > #orderButton:hover{
     animation: invertColorAnimation 0.3s forwards;
+    border-color: transparent;
 }

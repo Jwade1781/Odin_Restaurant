@@ -1,4 +1,5 @@
 import "./css/Pages/nav.css"
+import {renderHome} from "./home.js";
 
 const renderNav = (() => {
     console.log("Creating Nav");
@@ -21,19 +22,19 @@ const renderNav = (() => {
     const buttons = [
         Home = {
             "name" : "Home",
-            "file" : "./home.js",
+            "onclick" : renderHome,
         },
         Menu = {
             "name" : "Menu",
-            "file" : "./menu.js",
+            "onclick" : "./menu.js",
         },
         Gallery = {
             "name" : "Gallery",
-            "file" : "./gallery.js",
+            "onclick" : "./gallery.js",
         },
         Contact = {
             "name" : "Contact",
-            "file" : "./contact.js",
+            "onclick" : "./contact.js",
         },
     ];
 
@@ -41,6 +42,12 @@ const renderNav = (() => {
         const newButton = document.createElement("h5");
         newButton.textContent = button["name"];
         navButtonsDiv.appendChild(newButton);
+
+        newButton.addEventListener("click", () => {
+            const contentDiv = document.querySelector("#content");
+            contentDiv.removeChild(contentDiv.lastChild);
+            contentDiv.appendChild(button["onclick"]);
+        });
     }
 
     navLogoDiv.appendChild(logoImg);

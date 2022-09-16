@@ -1,9 +1,10 @@
 #content > #navHeaderDiv {
+    padding: 0 var(--medPadding);
     color: var(--fontLight);
     display: flex;
     flex-direction: column;
     background-color: var(--accentColor2);
-    border: var(--smBorder) solid var(--accentColor3);
+    border: var(--xSmBorder) solid var(--accentColor3);
 }
 
 #content > #navHeaderDiv > h3 {
