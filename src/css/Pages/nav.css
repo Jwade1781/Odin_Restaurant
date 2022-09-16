@@ -1,0 +1,41 @@
+#content > #navHeaderDiv {
+    color: var(--fontLight);
+    display: flex;
+    flex-direction: row;
+    background-color: var(--accentColor2);
+    padding: 0 var(--smPadding);
+    border: var(--smBorder) solid var(--accentColor3);
+}
+
+#content > #navHeaderDiv > #navLogoDiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#content > #navHeaderDiv > #navLogoDiv > img {
+    content: url("/src/images/logo.png");
+    width: 70px;
+    height: 60px;
+}
+
+#content > #navHeaderDiv > #navButtonsDiv {
+    margin-left: auto;
+    margin-right: var(--lgPadding);
+    justify-self: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--smPadding);
+}
+
+#content > #navHeaderDiv > #navButtonsDiv > * {
+    justify-self: end;
+    cursor: pointer;
+}
+
+#content > #navHeaderDiv > #navButtonsDiv > *:hover {
+    filter: invert(1);
+    animation: wiggleAnimation 0.2s;
+}
