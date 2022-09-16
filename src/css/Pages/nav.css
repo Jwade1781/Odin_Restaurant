@@ -1,46 +1,59 @@
 #content > #navHeaderDiv {
     color: var(--fontLight);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background-color: var(--accentColor2);
-    padding: 0 var(--smPadding);
     border: var(--smBorder) solid var(--accentColor3);
 }
 
-#content > #navHeaderDiv > #navLogoDiv {
+#content > #navHeaderDiv > h3 {
+    margin-bottom: calc(-1 * var(--medPadding));
+    text-align: center;
+    font-family: 'Kaushan Script', cursive;
+}
+
+#content > #navHeaderDiv > div {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-content: flex-end;
+}
+
+
+#content > #navHeaderDiv > div > #navLogoDiv {
+    display: flex;
     justify-items: center;
     font-family: 'Kaushan Script', cursive;
 }
 
-#content > #navHeaderDiv > #navLogoDiv > img {
+#content > #navHeaderDiv > div > #navLogoDiv > img {
     content: url("/src/images/logo.png");
-    width: 70px;
-    height: 60px;
+    width: 60px;
+    height: 53px;
 }
 
-#content > #navHeaderDiv > h3 {
+#content > #navHeaderDiv > div > h3 {
     margin-left: auto;
-    align-self: center;
+    align-self: flex-end;
     font-family: 'Kaushan Script', cursive;
 }
 
-#content > #navHeaderDiv > #navButtonsDiv {
+#content > #navHeaderDiv > div > #navButtonsDiv {
     margin-left: auto;
     margin-right: var(--lgPadding);
-    justify-self: center;
+    padding: var(--smPadding);
+    align-self: flex-end;
     display: flex;
     flex-direction: row;
     gap: var(--smPadding);
 }
 
-#content > #navHeaderDiv > #navButtonsDiv > * {
+#content > #navHeaderDiv > div > #navButtonsDiv > * {
+    margin: 0;
     justify-self: end;
     cursor: pointer;
+    justify-self: flex-end;
 }
 
-#content > #navHeaderDiv > #navButtonsDiv > *:hover {
+#content > #navHeaderDiv > div > #navButtonsDiv > *:hover {
     animation: invertColorAnimation 0.3s forwards;
 }
