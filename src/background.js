@@ -1,6 +1,5 @@
 export function backgroundShifter() {
-    console.log("Starting background shift");
-    const pauseMS = 5000;
+    const pauseMS = 6000;
     if (backgroundShifter.bgElement === undefined) {
         backgroundShifter.bgElement = document.querySelector("#background");
         backgroundShifter.filePath = "../src/images/";

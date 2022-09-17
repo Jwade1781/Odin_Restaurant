@@ -1,7 +1,6 @@
 import "./css/Pages/home.css"
 
 const renderHome = (() => {
-    console.log("Creating Home");
     const homeDiv = document.createElement("div");
     homeDiv.id = "homeDiv";
     

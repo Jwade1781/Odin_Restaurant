@@ -1,0 +1,65 @@
+#content > #menuDiv {
+    /*display: flex;
+    flex-direction: row;*/
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-rows: repeat(auto-fit, 1fr);
+    display: grid;
+    resize: both;
+    justify-content: center;
+    color: var(--fontLight);
+    padding: var(--lgPadding);
+    gap: var(--smPadding); 
+}
+
+#content > #menuDiv > div {
+    background-color: var(--accentColor1);
+    border-radius: var(--roundBorder);
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: var(--smPadding);
+    padding: var(--medPadding);
+}
+
+#content > #menuDiv > .typeDiv >  .menuTypeHeader {
+    text-align: center;
+    font-family: 'Kaushan Script', cursive;
+    border-bottom: var(--smBorder) solid orangered;
+}
+
+#content > #menuDiv > .typeDiv > .foodItemDiv {
+    background-color: var(--accentColor5);
+    width: calc(100% - var(--medPadding));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: var(--smPadding);
+    
+}
+#content > #menuDiv > .typeDiv > .foodItemDiv > *,
+#content > #menuDiv > .typeDiv > .foodItemDiv > .namePriceDiv > * {
+    margin: 0;
+}
+
+#content > #menuDiv > .typeDiv > .foodItemDiv > .namePriceDiv {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#content > #menuDiv > .typeDiv > .foodItemDiv > .namePriceDiv > .foodPrice {
+    margin-left: auto;
+    justify-self: flex-end;
+}
+
+#content > #menuDiv > .typeDiv > .foodItemDiv > details > .foodDescr {
+    font-style: italic;
+    margin-top: var(--xSmPadding);
+    font-size:smaller;
+}
+
+#content > #menuDiv > .typeDiv > .foodItemDiv > details > img {
+    max-width: 100%;
+    height: auto;
+}

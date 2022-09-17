@@ -52,7 +52,7 @@
 }
 
 .fadeOut {
-    animation: fadeOutAnimation 2s linear forwards;
+    animation: fadeOutAnimation 0.5s linear forwards;
 }
 
 

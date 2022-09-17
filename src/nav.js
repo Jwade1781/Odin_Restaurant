@@ -1,8 +1,8 @@
 import "./css/Pages/nav.css"
 import {renderHome} from "./home.js";
+import {renderMenu} from "./menu.js";
 
 const renderNav = (() => {
-    console.log("Creating Nav");
     const navHeaderDiv = document.createElement("div");
     const navLogoDiv = document.createElement("div");
     const navButtonsDiv = document.createElement("div");
@@ -26,7 +26,7 @@ const renderNav = (() => {
         },
         Menu = {
             "name" : "Menu",
-            "onclick" : "./menu.js",
+            "onclick" : renderMenu,
         },
         Gallery = {
             "name" : "Gallery",
