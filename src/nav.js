@@ -62,4 +62,14 @@ const renderNav = (() => {
 
 })();
 
+window.onscroll = () => {
+    const navHeaderDiv = document.querySelector("#navHeaderDiv");
+    const padding = "-10px"
+    if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1)
+        navHeaderDiv.style.marginTop = padding;
+    
+    else 
+        navHeaderDiv.style.marginTop = "0px";
+};
+
 export { renderNav };

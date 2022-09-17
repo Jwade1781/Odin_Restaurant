@@ -1,17 +1,17 @@
 #content > #menuDiv {
     /*display: flex;
     flex-direction: row;*/
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    grid-template-rows: repeat(auto-fit, 1fr);
+    
     display: grid;
-    resize: both;
-    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
     color: var(--fontLight);
     padding: var(--lgPadding);
-    gap: var(--smPadding); 
+    gap: var(--smPadding);
+    grid-auto-flow: row dense;
 }
 
-#content > #menuDiv > div {
+#content > #menuDiv > .typeDiv {
     background-color: var(--accentColor1);
     border-radius: var(--roundBorder);
     height: fit-content;

@@ -33,3 +33,7 @@ body {
     background-size: cover;
 }
 
+
+#content > :not(#navHeaderDiv){
+    margin-top: var(--lgPadding);
+}

@@ -1,10 +1,13 @@
 #content > #navHeaderDiv {
+    position: fixed;
+    width: 100%;
     padding: 0 var(--medPadding);
     color: var(--fontLight);
     display: flex;
     flex-direction: column;
     background-color: var(--accentColor1);
     border: var(--xSmBorder) solid var(--accentColor3);
+    transition: 0.2s;
 }
 
 #content > #navHeaderDiv > h3 {

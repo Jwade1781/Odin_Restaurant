@@ -13,9 +13,6 @@ const renderMenu = (() => {
         foodItem,
         foodItem,
         foodItem,
-        foodItem,
-        foodItem,
-        foodItem,
         foodItem
     ];
 
