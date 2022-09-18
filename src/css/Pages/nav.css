@@ -8,6 +8,7 @@
     background-color: var(--accentColor1);
     border: var(--xSmBorder) solid var(--accentColor3);
     transition: 0.2s;
+    box-shadow: var(--shadowBox1);
 }
 
 #content > #navHeaderDiv > h3 {
@@ -59,15 +60,16 @@
 }
 
 #content > #navHeaderDiv > div > #navButtonsDiv > *:hover {
-    animation: invertColorAnimation 0.3s forwards;
+    animation: invertColorAnimation 0.2s forwards;
 }
 
 @media (max-width:600px) { 
     #content > #navHeaderDiv > h3 {
+        margin-right: var(--lgPadding);
         text-align: end;
     }
 
     #content > #navHeaderDiv > div > #navButtonsDiv {
-        margin-right: 0;
+        margin-right: var(--medPadding);
     }
  }

@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: var(--fontLight);
+    color: orangered;
     text-align: center;
 }
 
@@ -17,15 +17,21 @@
     font-family: 'Kaushan Script', cursive;
     border-bottom: var(--smBorder) solid orangered;
     margin-bottom: var(--lgPadding);
+    
 }
 
+#content > #homeDiv > #topHeader,
+#content > #homeDiv > #middleHeader,
+#content > #homeDiv > #orderButton {
+    
+} 
 #content > #homeDiv > #orderButton {
     padding: var(--xSmPadding) var(--smPadding);
     margin-top: var(--smPadding);
     border-radius: var(--roundBorder);
+    border-color: transparent;
 }
 
 #content > #homeDiv > #orderButton:hover{
-    animation: invertColorAnimation 0.3s forwards;
-    border-color: transparent;
+    animation: invertColorAnimation 0.2s forwards;
 }

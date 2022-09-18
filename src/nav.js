@@ -18,7 +18,7 @@ const renderNav = (() => {
     const topHeader = document.createElement("h3");
     topHeader.textContent = "Hibachi, Sushi, Fun";
 
-    let Home, Menu, Gallery, Contact;
+    let Home, Menu, About, Contact;
     const buttons = [
         Home = {
             "name" : "Home",
@@ -28,9 +28,9 @@ const renderNav = (() => {
             "name" : "Menu",
             "onclick" : renderMenu,
         },
-        Gallery = {
-            "name" : "Gallery",
-            "onclick" : "./gallery.js",
+        About = {
+            "name" : "About",
+            "onclick" : "./about.js",
         },
         Contact = {
             "name" : "Contact",
