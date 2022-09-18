@@ -10,6 +10,7 @@ body > * {
     height: 100%;
     width: 100%;
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
 }
 
 body {
@@ -33,10 +34,10 @@ body {
     width: 100%;
     height: 100%;
     background-size: cover;
+    filter:brightness(0.5);
 }
 
-
 #content > :not(#navHeaderDiv){
-    margin-top: var(--lgPadding);
-    background-color: var(--accentColor5);
+    margin-top: var(--medPadding);
+    height: 100%;
 }

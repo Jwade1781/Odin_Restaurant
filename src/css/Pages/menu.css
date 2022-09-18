@@ -1,14 +1,14 @@
 #content > #menuDiv {
-    /*display: flex;
-    flex-direction: row;*/
-    
+    /*display: inline-flex;
+    flex-wrap: wrap;
+    padding: 0 var(--medPadding);
+    color: var(--fontLight);
+    justify-content: center;*/
+
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-
     color: var(--fontLight);
-    padding: var(--lgPadding);
     gap: var(--smPadding);
-    grid-auto-flow: row dense;
 }
 
 #content > #menuDiv > .typeDiv {
@@ -19,6 +19,7 @@
     flex-direction: column;
     gap: var(--smPadding);
     padding: var(--medPadding);
+    box-shadow: var(--shadowBox1);
 }
 
 #content > #menuDiv > .typeDiv >  .menuTypeHeader {
@@ -32,8 +33,6 @@
     width: calc(100% - var(--medPadding));
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
     padding: var(--smPadding);
     
 }

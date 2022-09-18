@@ -16,8 +16,7 @@
 #content > #homeDiv > #topHeader {
     font-family: 'Kaushan Script', cursive;
     border-bottom: var(--smBorder) solid orangered;
-    margin-bottom: var(--lgPadding);
-    
+    margin-bottom: var(--lgPadding);  
 }
 
 #content > #homeDiv > #topHeader,

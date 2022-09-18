@@ -1,8 +1,22 @@
 import "./css/Pages/nav.css"
-import {renderHome} from "./home.js";
-import {renderMenu} from "./menu.js";
+import { renderHome } from "./home.js";
+import { renderMenu } from "./menu.js";
+import { renderAbout } from "./about.js";
+
+const AddScrollEvent = () => {
+    window.onscroll = () => {
+        const navHeaderDiv = document.querySelector("#navHeaderDiv");
+        const paddingOffset = "-10px"
+        if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1)
+            navHeaderDiv.style.marginTop = paddingOffset;
+
+        else
+            navHeaderDiv.style.marginTop = "0px";
+    };
+}
 
 const renderNav = (() => {
+    AddScrollEvent();
     const navHeaderDiv = document.createElement("div");
     const navLogoDiv = document.createElement("div");
     const navButtonsDiv = document.createElement("div");
@@ -21,32 +35,44 @@ const renderNav = (() => {
     let Home, Menu, About, Contact;
     const buttons = [
         Home = {
-            "name" : "Home",
-            "onclick" : renderHome,
+            "name": "Home",
+            "onclick": renderHome,
         },
         Menu = {
-            "name" : "Menu",
-            "onclick" : renderMenu,
+            "name": "Menu",
+            "onclick": renderMenu,
         },
         About = {
-            "name" : "About",
-            "onclick" : "./about.js",
+            "name": "About",
+            "onclick": renderAbout,
         },
         Contact = {
-            "name" : "Contact",
-            "onclick" : "./contact.js",
+            "name": "Contact",
+            "onclick": "./contact.js",
         },
     ];
 
-    for (const button of buttons){
+    for (const button of buttons) {
         const newButton = document.createElement("h5");
         newButton.textContent = button["name"];
         navButtonsDiv.appendChild(newButton);
 
         newButton.addEventListener("click", () => {
             const contentDiv = document.querySelector("#content");
-            contentDiv.removeChild(contentDiv.lastChild);
-            contentDiv.appendChild(button["onclick"]);
+            const removingElement = contentDiv.lastChild;
+
+            removingElement.classList.add("slideOut");
+
+            removingElement.onanimationend = () => {
+                removingElement.classList.remove("slideOut");
+                contentDiv.removeChild(contentDiv.lastChild);
+
+                contentDiv.appendChild(button["onclick"]);
+                contentDiv.lastChild.classList.add("slideIn");
+                contentDiv.lastChild.onanimationend = () => {
+                    contentDiv.lastChild.classList.remove("slideIn");
+                };
+            }
         });
     }
 
@@ -62,14 +88,6 @@ const renderNav = (() => {
 
 })();
 
-window.onscroll = () => {
-    const navHeaderDiv = document.querySelector("#navHeaderDiv");
-    const padding = "-10px"
-    if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1)
-        navHeaderDiv.style.marginTop = padding;
-    
-    else 
-        navHeaderDiv.style.marginTop = "0px";
-};
+
 
 export { renderNav };

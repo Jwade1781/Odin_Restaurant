@@ -1,5 +1,5 @@
 #content > #navHeaderDiv {
-    position: fixed;
+    /*position: sticky;*/
     width: 100%;
     padding: 0 var(--medPadding);
     color: var(--fontLight);

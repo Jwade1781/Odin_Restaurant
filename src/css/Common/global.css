@@ -17,7 +17,7 @@
 	--accentColor2: rgb(85, 85, 85);
 	--accentColor3: rgb(54, 55, 64);
 	--accentColor4: rgb(22, 27, 34);
-	--accentColor5: rgba(0,0,0,0.5);
+	--accentColor5: rgba(0, 0, 0, 0.5);
 
 	--fontLight: var(--lightColor);
 	--fontDark: black;
@@ -38,5 +38,8 @@
 	--borderHover: var(--lgBorder) solid var(--mainColor);
 
 	--shadowBox1: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-	--shadowBox2: --shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+	--shadowBox2: rgba(255, 255, 255, 0.16) 0px 1px 3px, rgba(255, 255, 255, 0.23) 0px 1px 3px;
+	--shadowBox3: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+	--textShadow1: 2px 2px 3px rgba(0,0,0,0.8);
 }

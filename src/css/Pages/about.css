@@ -1,0 +1,42 @@
+#content > #aboutDiv {
+    display: flex;
+    flex-direction: column;
+    color: var(--fontLight);
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#content > #aboutDiv > div {
+    width: clamp(300px, 50%, 100%);
+    padding: var(--smPadding) var(--lgPadding) var(--lgPadding);
+    background-color: orangered;
+    box-shadow: var(--shadowBox3);
+    display: flex;
+    flex-direction: column;
+    z-index: -1;
+}
+
+#content > #aboutDiv > div > #mainHeaderWrapper {
+    align-self: center;
+    width: fit-content;
+}
+
+#content > #aboutDiv > div > #mainHeaderWrapper > #mainHeader {
+    font-style: italic;
+    text-align: center;
+    text-shadow: var(--textShadow1);
+}
+
+#content > #aboutDiv > div > a > img {
+    width: clamp(250px, 35%, 900px);
+    margin: 0 var(--smPadding) var(--medPadding);
+    height: fit-content;
+    filter: contrast(1.25);
+    box-shadow: var(--shadowBox3);
+    float: left;
+}
+
+#content > #aboutDiv > div > a {
+    float: right;
+}
+
